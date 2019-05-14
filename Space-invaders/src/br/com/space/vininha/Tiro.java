@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 
 import br.com.space.vininha.base.Elemento;
-
+//deswnha os tirininhos e extende elemento para confirmar as colisoes
 public class Tiro extends Elemento {
 
 	private boolean inimigo;

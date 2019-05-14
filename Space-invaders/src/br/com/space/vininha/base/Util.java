@@ -3,6 +3,7 @@ package br.com.space.vininha.base;
 public class Util {
 
 	public static boolean colide(Elemento a, Elemento b) {
+		//sabe se um elemento colide com outro
 		if (!a.isAtivo() || !b.isAtivo())
 			return false;
 

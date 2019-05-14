@@ -5,12 +5,12 @@ import java.awt.Graphics2D;
 
 public class Elemento {
 
-	private int px;
-	private int py;
+	private int px;//pixel eixo x
+	private int py;//pixel eixo y
 	private int largura;
 	private int altura;
-	private int vel;
-	private boolean ativo;
+	private int velocidade;
+	private boolean ativo;//atualiza e desenha o personagem
 	private Color cor;
 
 	public Elemento() {
@@ -63,11 +63,11 @@ public class Elemento {
 	}
 
 	public int getVel() {
-		return vel;
+		return velocidade;
 	}
 
 	public void setVel(int vel) {
-		this.vel = vel;
+		this.velocidade = vel;
 	}
 
 	public boolean isAtivo() {
@@ -87,10 +87,12 @@ public class Elemento {
 	}
 
 	public void incPx(int x) {
+		//muda a posicao do elemento na tela
 		px = px + x;
 	}
 
 	public void incPy(int y) {
+		//muda a posicao do elemento na tela
 		py = py + y;
 	}
 

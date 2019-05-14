@@ -76,6 +76,7 @@ public class Jogo extends JFrame {
 
 	private void setaTecla(int tecla, boolean pressionada) {
 		switch (tecla) {
+		//teclado
 		case KeyEvent.VK_UP:
 			controleTecla[0] = pressionada;
 			break;
@@ -113,11 +114,11 @@ public class Jogo extends JFrame {
 
 	private Elemento tanque;
 
-	private Invader[][] invasores = new Invader[11][5];
-
+	private Invader[][] invasores = new Invader[11][5];//naves inimigas
+	
+	//um tipo pequeno, dois medios e dois grandes
 	private Invader.Tipos[] tipoPorLinha = { Tipos.PEQUENO, Tipos.MEDIO, Tipos.MEDIO, Tipos.GRANDE, Tipos.GRANDE };
 
-	//
 	private int linhaBase = 60;
 
 	// Controle do espacamento entre os inimigos e outros elementos
@@ -153,18 +154,19 @@ public class Jogo extends JFrame {
 		tanque.setPy(tela.getHeight() - tanque.getAltura() - linhaBase);
 
 		tiroTanque = new Tiro();
-		tiroTanque.setVel(-15);
+		tiroTanque.setVel(-25);//velocidade tiro de baxo pra cima
 
 		chefe = new Invader(Invader.Tipos.CHEFE);
 
-		tiroChefe = new Tiro(true);
-		tiroChefe.setVel(20);
+		tiroChefe = new Tiro(true);//tiro inimigo
+		tiroChefe.setVel(25);//velocidade do tiro do chefe
 		tiroChefe.setAltura(15);
 
 		for (int i = 0; i < tiros.length; i++) {
 			tiros[i] = new Tiro(true);
 		}
-
+		
+		//gera os invaders
 		for (int i = 0; i < invasores.length; i++) {
 			for (int j = 0; j < invasores[i].length; j++) {
 				Invader e = new Invader(tipoPorLinha[j]);

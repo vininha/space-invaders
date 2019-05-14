@@ -6,6 +6,7 @@ import java.awt.Graphics2D;
 import br.com.space.vininha.base.Elemento;
 
 public class Tanque extends Elemento {
+	//desenha o tanquezinho verde
 
 	private final int cano = 8;
 

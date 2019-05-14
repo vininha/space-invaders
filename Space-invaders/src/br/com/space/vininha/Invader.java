@@ -8,6 +8,7 @@ import br.com.space.vininha.base.Elemento;
 public class Invader extends Elemento {
 
 	enum Tipos {
+		//tipos de inimigos
 		PEQUENO, MEDIO, GRANDE, CHEFE
 	}
 
